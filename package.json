@@ -1,8 +1,12 @@
 {
   "name": "ember-cli-sliding-menu",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "The convenient sliding-menu component",
-  "author": "",
+  "author": {
+    "name": "Vladimir Katansky",
+    "email": "pointhomefinal@gmail.com",
+    "url": "http://katansky-blog.com/"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"

@@ -34,8 +34,13 @@ property appIdentifier not to '.ember-application' container itself(default) but
 In the example above I'm using className - '.app' for Application's View*
 
 
-## Options
+## Example
+Here you can find convenient example with bucket of supporting features, like:
+- **background-overlay** which gives an opportunity to close menu by clicking to the free of opened menu
+- **toggle-menu** which helps to handle menu open/close via buttons click/action
+[EXAMPLE](https://github.com/Blackening999/testing-menu)
 
+## Options
 There are plenty of options available.
 
 1. Transition trough menu item with menu-closing
