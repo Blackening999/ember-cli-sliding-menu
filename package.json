@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-sliding-menu",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "The convenient sliding-menu component",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -33,7 +33,7 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon", "sliding-menu", "menu", "toggle-menu", "mobile-menu", "sliding"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
