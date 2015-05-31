@@ -6,7 +6,6 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    app.import('bower_components/momentjs/moment.js');
-    app.import('bower_components/hammerjs/hammer.js');
+    this.app.import('bower_components/hammerjs/hammer.js');
   }
 };
