@@ -1,12 +1,8 @@
 {
   "name": "ember-cli-sliding-menu",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "The convenient sliding-menu component",
-  "author": {
-    "name": "Vladimir Katansky",
-    "email": "pointhomefinal@gmail.com",
-    "url": "http://katansky-blog.com/"
-  },
+  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -27,7 +23,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
   "licenses": [
     {
       "type": "MIT",
@@ -49,7 +44,12 @@
     "glob": "^4.4.0"
   },
   "keywords": [
-    "ember-addon", "sliding-menu", "menu", "toggle-menu", "mobile-menu", "sliding"
+    "ember-addon",
+    "sliding-menu",
+    "menu",
+    "toggle-menu",
+    "mobile-menu",
+    "sliding"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
