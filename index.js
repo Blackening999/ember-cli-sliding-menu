@@ -6,6 +6,7 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    this.app.import('bower_components/hammerjs/hammer.js');
+    app.import('bower_components/hammerjs/hammer.js');
+    //this.app.import(app.bowerDirectory + '/remarkable/dist/remarkable.js');
   }
 };
