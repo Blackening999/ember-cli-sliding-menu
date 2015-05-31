@@ -44,7 +44,6 @@ Here you can find convenient example with bucket of supporting features, like:
 There are plenty of options available.
 
 1. Transition trough menu item with menu-closing
-
 In your application controller:
 ```js
   import Ember from 'ember';
