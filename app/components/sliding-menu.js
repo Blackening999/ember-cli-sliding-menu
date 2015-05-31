@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Movement from 'app/utils/movement';
+import Movement from '../utils/movement';
 
 /**
  * Sliding menu
@@ -11,9 +11,7 @@ export default Ember.Component.extend({
   classNameBindings: ['slidingElement'],
 
   //Custom sliding menu class
-  slidingElement: function() {
-    return this.get('slidingElementClass') || 'sliding-menu';
-  }.property(),
+  slidingElement: 'sliding-menu',
   //Movement instance
   movement: null,
   //Hammer instance
@@ -21,7 +19,7 @@ export default Ember.Component.extend({
   //jQuery instance of sliding element
   $slidingComponent: '',
   //Default application identifier
-  appIdentifier: '.app',
+  appIdentifier: '.ember-application',
   //Menu Progress manager
   menuProgressService: null,
   menuProgress: Ember.computed.alias('menuProgressService.menuProgress'),

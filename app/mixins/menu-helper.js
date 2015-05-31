@@ -9,7 +9,7 @@ export default Ember.Mixin.create({
    */
   transitionAndCloseMenu: function() {
     this.transitionToRoute.apply(this, arguments);
-    this.progressManager.updateProgress(0);
+    this.menuProgressService.updateProgress(0);
     Ember.$('.sliding-menu').css({ visibility: 'hidden' });
   },
   actions: {
