@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Ember-cli-sliding-menu by Blackening999</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/Blackening999/ember-cli-sliding-menu">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Ember-cli-sliding-menu</h1>
+            <h2>A very easy to use sliding-menu addon</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/Blackening999/ember-cli-sliding-menu/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/Blackening999/ember-cli-sliding-menu/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>
+<a id="welcome-to-ember-cli-sliding-menu-addon" class="anchor" href="#welcome-to-ember-cli-sliding-menu-addon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to ember-cli-sliding-menu addon</h3>
+
+<p>This is another convenient component representing the side sliding-menu (left or right).
+Originally was inspired by similar existing addons/libraries.
+It has some features since it was designed for mobile applications at first:</p>
+
+<ul>
+<li>Performance optimized for mobile applications (tested for cordova app on iOS)</li>
+<li>It has the effect of inertia</li>
+<li>Highly customizable</li>
+<li>Separated handler so your app won't experience any conflict</li>
+<li>Easy to use (see below)</li>
+<li>For desktop apps there is a commented frost-glass effect logic (beta)</li>
+</ul>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p><a href="https://github.com/Blackening999/testing-menu">Ember Cli Sliding Menu EXAMPLE</a>
+Here you can find convenient example with bucket of supporting features, like:</p>
+
+<ul>
+<li>
+<strong>background-overlay</strong> which gives an opportunity to close menu by clicking to the free of opened menu</li>
+<li>
+<strong>toggle-menu</strong> which helps to handle menu open/close via buttons click/action</li>
+</ul>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li><a href="https://github.com/hammerjs/hammer.js">Hammer</a></li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Install the addon</li>
+</ol>
+
+<div class="highlight highlight-bash"><pre>  $ ember install:addon ember-cli-sliding-menu</pre></div>
+
+<ol>
+<li>Use the component where you need it</li>
+</ol>
+
+<div class="highlight highlight-js"><pre>  {{#sliding<span class="pl-k">-</span>menu appIdentifier<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>.app<span class="pl-pds">'</span></span>}}
+    <span class="pl-c">//... your menu items goes here</span>
+  {{/sliding<span class="pl-k">-</span>menu}}</pre></div>
+
+<ol>
+<li>That's all. Now everything you need is decorate your menu</li>
+</ol>
+
+<p><em>P.S. In order to get rid from any possible glitches it's highly recommended to set
+property appIdentifier not to '.ember-application' container itself(default) but to its descendant.
+In the example above I'm using className - '.app' for Application's View</em></p>
+
+<h3>
+<a id="configurations" class="anchor" href="#configurations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configurations</h3>
+
+<p>There are plenty of options available.</p>
+
+<ol>
+<li>Transition trough menu item with menu-closing
+In your application controller:</li>
+</ol>
+
+<div class="highlight highlight-js"><pre>  <span class="pl-k">import</span> Ember <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>ember<span class="pl-pds">'</span></span>;
+  <span class="pl-k">import</span> MenuHelper <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>testing-menu/mixins/menu-helper<span class="pl-pds">'</span></span>;
+
+  <span class="pl-k">export</span> <span class="pl-k">default</span> Ember.Controller.extend(MenuHelper, {});</pre></div>
+
+<p>Add menu item</p>
+
+<div class="highlight highlight-js"><pre>      <span class="pl-k">&lt;</span>div <span class="pl-k">class</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>menu<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span>div {{action <span class="pl-s"><span class="pl-pds">"</span>transitionFromMenu<span class="pl-pds">"</span></span> <span class="pl-s"><span class="pl-pds">"</span>home<span class="pl-pds">"</span></span>}} <span class="pl-k">class</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>menu-item<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>Home page<span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span></pre></div>
+
+<ol>
+<li>Options represented by properties you can pass to component:</li>
+<li>slideDirection: <a href="https://github.com/String" class="user-mention">@String</a> 'toLeft|toRight' default: 'toLeft' - menu placement, toLeft means from right to left</li>
+<li>pannableWidth: <a href="https://github.com/Number" class="user-mention">@Number</a>  &gt; 0              default: 40       - width of zone where menu can be invoked</li>
+<li>defaultSpeed: <a href="https://github.com/Double" class="user-mention">@Double</a>   &gt; 0.00 &amp;&amp; &lt; 1.00 default: 0.03     - menu animation speed</li>
+</ol>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p><a href="http://github.com/Blackening999">Vladimir Katansky</a></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with addon? Contact <a href="mailto:pointhomefinal@gmail.com">pointhomefinal@gmail.com</a> and I’ll help you sort it out.</p>
+
+<h3>
+<a id="whats-next" class="anchor" href="#whats-next" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's next?</h3>
+
+<p>I'm going to write a blog post on <a href="https://katansky-blog.com">my blog</a> about how everything works for educational purposes.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/Blackening999">Blackening999</a> can be found on <a href="https://github.com/Blackening999/ember-cli-sliding-menu">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
