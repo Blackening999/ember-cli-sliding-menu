@@ -11,6 +11,8 @@ It has some features since it was designed for mobile applications at first:
 - Easy to use (see below)
 - For desktop apps there is a commented frost-glass effect logic (beta)
 
+**You can find more convenient page [here](http://blackening999.github.io/ember-cli-sliding-menu)**
+
 ## Dependencies
 - [Hammer](https://github.com/hammerjs/hammer.js)
 
@@ -35,10 +37,11 @@ In the example above I'm using className - '.app' for Application's View*
 
 
 ## Example
+[Ember Cli Sliding Menu EXAMPLE](https://github.com/Blackening999/testing-menu)
 Here you can find convenient example with bucket of supporting features, like:
 - **background-overlay** which gives an opportunity to close menu by clicking to the free of opened menu
 - **toggle-menu** which helps to handle menu open/close via buttons click/action
-[EXAMPLE](https://github.com/Blackening999/testing-menu)
+
 
 ## Options
 There are plenty of options available.
